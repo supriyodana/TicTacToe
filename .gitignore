@@ -12,6 +12,7 @@
 
 # --- External Tools & IDEs ---
 .vs/
+.vscode/
 .gradle/
 .consulo/
 *.csproj
