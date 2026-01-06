@@ -18,7 +18,6 @@ public class gamemanager : MonoBehaviour
     public TMP_Text statusText;
 
     
-    // // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         for (int i = 0; i < cells.Length; i++)
@@ -31,10 +30,10 @@ public class gamemanager : MonoBehaviour
 
     }
 
-    void Update()
-    {
+    // void Update()
+    // {
 
-    }
+    // }
 
     public void onclick(int index)
     {
