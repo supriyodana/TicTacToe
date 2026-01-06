@@ -17,6 +17,8 @@ public class gamemanager : MonoBehaviour
 
     public TMP_Text statusText;
 
+    private int turn = 0;
+
     
     void Start()
     {
@@ -43,21 +45,36 @@ public class gamemanager : MonoBehaviour
             if (currentplayer == playerstate.player1)
             {
                 texts[index].text = "X";
+                turn+=1;
                 currentplayer = playerstate.player2;
                 statusText.text = "Player O turn";
-                if (checkWin())
+                // if (checkWin())
+                // {
+                //     statusText.text = "player X won";
+                // }
+                if (!checkWin() && turn == 9)
                 {
+                    statusText.text = "its draw, try again";
+                }else{
                     statusText.text = "player X won";
                 }
             }
             else
             {
                 texts[index].text = "O";
+                turn+=1;
                 currentplayer = playerstate.player1;
                 statusText.text = "Player X turn";
                 checkWin();
-                if (checkWin())
+                // if (checkWin())
+                // {
+                //     statusText.text = "player O won";
+                // }
+                if (!checkWin() && turn == 9)
                 {
+                    statusText.text = "its draw, try again";
+                }
+                else{
                     statusText.text = "player O won";
                 }
             }
