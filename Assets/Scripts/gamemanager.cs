@@ -55,7 +55,7 @@ public class gamemanager : MonoBehaviour
                 if (!checkWin() && turn == 9)
                 {
                     statusText.text = "its draw, try again";
-                }else{
+                }else if(checkWin()){
                     statusText.text = "player X won";
                 }
             }
@@ -65,7 +65,7 @@ public class gamemanager : MonoBehaviour
                 turn+=1;
                 currentplayer = playerstate.player1;
                 statusText.text = "Player X turn";
-                checkWin();
+                // checkWin();
                 // if (checkWin())
                 // {
                 //     statusText.text = "player O won";
@@ -74,7 +74,7 @@ public class gamemanager : MonoBehaviour
                 {
                     statusText.text = "its draw, try again";
                 }
-                else{
+                else if(checkWin()){
                     statusText.text = "player O won";
                 }
             }
